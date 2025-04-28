@@ -9,8 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      # is Docker needed?
-      # uses: docker/setup-docker-action@v4
       - uses: dagger/dagger-for-github@8.0.0
         with:
           verb: functions
