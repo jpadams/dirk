@@ -12,3 +12,9 @@ jobs:
       - uses: dagger/dagger-for-github@8.0.0
         with:
           verb: functions
+      - uses: dagger/dagger-for-github@8.0.0
+        with:
+          verb: call
+          args: 'go-program --assignment "write me a curl clone to a main.go ensure workdir points there" file --path "./main.go" contents'   
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
